@@ -21,9 +21,14 @@ console.log("USER ROLE:", req.user?.role);
 
 
 next()
-}catch(err){
-  res.status(401).json({message:"erro invalid and expair token"})
+} catch (err) {
+  console.log("JWT ERROR:", err.message);
+
+  return res.status(401).json({
+    message: err.message
+  });
 }
+
 } ;
 
 
