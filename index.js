@@ -221,7 +221,7 @@ app.get ('/',(req,res)=>{
  app.use(errorHandler)
 
 //conogt mongose
-mongoose.connect(process.env.NODE_ENV =="development" ?process.env. process.env.MONGO_URI_DEV:process.env.MONGO_URL_PRO )
+mongoose.connect(process.env.NODE_ENV =="development" ?process.env. process.env.MONGO_URI_DEV:process.env.MONGO_URI_PRO )
     .then(()=>console.log("✅ mongoo isoo dabac"))
     .catch((err)=>console.log("❌ iisheeg haduu errror jiro",err))
 
